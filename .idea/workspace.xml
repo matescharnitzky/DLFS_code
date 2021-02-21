@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc749db1-1ae1-493f-98d4-aa5dc7bf9470" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/01_foundations/Code.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/01_foundations/Code.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_foundations/math.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/01_foundations/math.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_fundamentals/Code.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/02_fundamentals/Code.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_dlfs/Code.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/03_dlfs/Code.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_rnns/RNN_DLFS.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/06_rnns/RNN_DLFS.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nFg9CKpAR9Kx01MhxLDBvewMwt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc749db1-1ae1-493f-98d4-aa5dc7bf9470" name="Default Changelist" comment="" />
+      <created>1610991100452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610991100452</updated>
+    </task>
+    <servers />
+  </component>
+</project>
