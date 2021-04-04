@@ -1,9 +1,9 @@
 
-from matenn.utils import *
-from matenn.data import DataIterator
-from matenn.nn import NeuralNet
-from matenn.loss import Loss
-from matenn.optim import Optimizer
+from joelnet.utils import *
+from joelnet.data import DataIterator
+from joelnet.nn import NeuralNet
+from joelnet.loss import Loss
+from joelnet.optim import Optimizer
 
 
 class Trainer:
@@ -14,7 +14,7 @@ class Trainer:
                  optimizer: Optimizer) -> None:
 
         self.iterator = iterator
-        self. net = net
+        self.net = net
         self.loss = loss
         self.optimizer = optimizer
 
@@ -32,6 +32,7 @@ class Trainer:
         # fit
         for epoch in range(epochs):
             loss_train = 0.0
+            
             for batch in self.iterator(X_train, y_train):
                 # 1. forward pass from layer to layer to get the predictions
                 pred_train = self.net.forward(batch.inputs)

@@ -1,6 +1,6 @@
 
 
-from matenn.nn import NeuralNet
+from joelnet.nn import NeuralNet
 
 
 class Optimizer:

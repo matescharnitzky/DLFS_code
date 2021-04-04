@@ -2,7 +2,7 @@
 
 from typing import List, Iterator, Tuple
 
-from matenn.layers import Layer
+from joelnet.layers import Layer
 
 from numpy import ndarray
 

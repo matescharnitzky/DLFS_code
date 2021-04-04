@@ -3,7 +3,7 @@ import numpy as np
 
 from typing import Dict, Callable
 
-from matenn.utils import *
+from joelnet.utils import *
 
 
 class Layer:
@@ -33,7 +33,7 @@ class Linear(Layer):
     A linear layer takes the linear combination of inputs and weights.
     """
 
-    def __init__(self, input_size: ndarray, output_size: ndarray, seed: int) -> None:
+    def __init__(self, input_size: ndarray, output_size: ndarray, seed: int = 1) -> None:
         super().__init__()
         np.random.seed(seed)
         self.params["w"] = np.random.randn(input_size, output_size)

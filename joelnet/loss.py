@@ -16,4 +16,4 @@ class MSE(Loss):
         return np.sum((prediction - actual) ** 2) / prediction.shape[0]
 
     def grad(self, prediction: ndarray, actual: ndarray) -> ndarray:
-        return 2 * (prediction - actual) / prediction.shape[0]
+        return 2.0 * (prediction - actual) / prediction.shape[0]

@@ -2,7 +2,7 @@
 from numpy import ndarray
 import numpy as np
 
-from matenn.nn import NeuralNet
+from joelnet.nn import NeuralNet
 
 
 def assert_same_shape(array: ndarray,
