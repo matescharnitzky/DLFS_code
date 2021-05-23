@@ -1,5 +1,10 @@
 
-from joelnet.utils import *
+import numpy as np
+from numpy import ndarray
+
+from copy import deepcopy
+
+from joelnet.utils import permute_data
 from joelnet.data import DataIterator
 from joelnet.nn import NeuralNet
 from joelnet.loss import Loss
@@ -17,6 +22,7 @@ class Trainer:
         self.net = net
         self.loss = loss
         self.optimizer = optimizer
+        self.best_loss = 1e9
 
     def fit(self,
             X_train: ndarray, y_train: ndarray,
@@ -33,6 +39,9 @@ class Trainer:
         for epoch in range(epochs):
             loss_train = 0.0
             
+            if (epoch + 1) % eval_every == 0:
+                last_model = deepcopy(self.net)
+            
             for batch in self.iterator(X_train, y_train):
                 # 1. forward pass from layer to layer to get the predictions
                 pred_train = self.net.forward(batch.inputs)
@@ -48,4 +57,11 @@ class Trainer:
             if (epoch + 1) % eval_every == 0:
                 pred_test = self.net.forward(X_test)
                 loss_test = self.loss.loss(pred_test, y_test)
-                print(f"Epoch: {epoch + 1} |  Train loss: {loss_train:.3f} | Validation loss: {loss_test:.3f}")
+                
+                if loss_test < self.best_loss:
+                    print(f"Epoch: {epoch + 1} |  Train loss: {loss_train:.3f} | Validation loss: {loss_test:.3f}")
+                    self.best_loss = loss_test
+                else:
+                    print(f"Validaton loss increased after epoch: {epoch + 1}")
+                    self.net = last_model
+                    break

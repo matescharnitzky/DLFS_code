@@ -1,9 +1,11 @@
 
 import numpy as np
+from numpy import ndarray
 
 from typing import Dict, Callable
 
-from joelnet.utils import *
+from joelnet.utils import sigmoid, sigmoid_prime, tanh, tanh_prime, relu, relu_prime
+
 
 
 class Layer:
@@ -92,16 +94,7 @@ class Activation(Layer):
     def backward(self, output_grad: ndarray) -> ndarray:
         return output_grad * self.f_prime(self.inputs)
 
-
-def sigmoid(x: ndarray) -> ndarray:
-    return 1.0/(1.0 + np.exp(-1.0 * x))
-
-
-def sigmoid_prime(x: ndarray) -> ndarray:
-    s = sigmoid(x)
-    return s * (1 - s)
-
-
+    
 class Sigmoid(Activation):
     """
     A sigmoid activation layer
@@ -109,3 +102,21 @@ class Sigmoid(Activation):
 
     def __init__(self):
         super().__init__(sigmoid, sigmoid_prime)
+    
+    
+class Tanh(Activation):
+    """
+    A tanh activation layer
+    """
+    
+    def __init__(self):
+        super().__init__(tanh, tanh_prime)
+        
+
+class ReLU(Activation):
+    """
+    A ReLU activation layer
+    """
+    
+    def __init__(self):
+        super().__init__(relu, relu_prime)

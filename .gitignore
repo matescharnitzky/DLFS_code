@@ -7,6 +7,7 @@
 *.o
 
 *data/*
+04_extensions/images/*
 *.pkl*
 
 *.pt

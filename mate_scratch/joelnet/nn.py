@@ -30,3 +30,15 @@ class NeuralNet:
             for name, param in layer.params.items():
                 grad = layer.grads[name]
                 yield param, grad
+    
+    def params(self):
+        for layer in self.layers:
+            for name, param in layer.params.items():
+                grad = layer.grads[name]
+                yield param
+
+    def grads(self):
+        for layer in self.layers:
+            for name, param in layer.params.items():
+                grad = layer.grads[name]
+                yield grad

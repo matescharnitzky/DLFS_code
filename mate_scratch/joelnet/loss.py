@@ -12,6 +12,10 @@ class Loss:
 
 
 class MSE(Loss):
+    """
+    Cost function for regression problems.
+    """
+    
     def loss(self, prediction: ndarray, actual: ndarray) -> float:
         return np.sum((prediction - actual) ** 2) / prediction.shape[0]
 
