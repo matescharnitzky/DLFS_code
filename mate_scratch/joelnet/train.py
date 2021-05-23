@@ -31,10 +31,14 @@ class Trainer:
             eval_every: int,
             seed: int = 1) -> None:
 
+        # setup learning rate
+        setattr(self.optimizer, "max_epochs", epochs)
+        self.optimizer.setup_decay()
+        
         # permute
         np.random.seed(seed)
         X_train, y_train = permute_data(X_train, y_train)
-
+        
         # fit
         for epoch in range(epochs):
             loss_train = 0.0
@@ -65,3 +69,5 @@ class Trainer:
                     print(f"Validaton loss increased after epoch: {epoch + 1}")
                     self.net = last_model
                     break
+            # 7. decay learning rate
+            self.optimizer.decay_learning_rate()
